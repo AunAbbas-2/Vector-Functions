@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+double percentEven(vector<int> &v)
+{
+    double count = 0;
+    for (size_t i = 0; i < v.size(); i++)
+    {
+        if (v[i] % 2 == 0)
+        {
+            count++;
+        }
+    }
+    float percentage = (count / v.size()) * 100;
+
+    return percentage;
+}
+
+int main()
+{
+    vector<int> v = {6, 2, 9, 11, 3};
+    cout << "The percentage of even numbers in v is: " << percentEven(v) << endl;
+
+    return 0;
+}
